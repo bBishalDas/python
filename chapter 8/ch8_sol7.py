@@ -1,9 +1,14 @@
 def rem(l, word):
     n=[]
     for item in l:
-        if not(item==word):
-            n.append(item.strip(word))
+        if item != word:
+            n.append(item.replace(word, ""))
     return n
 
-l=["bishal", "an", "panda", "haha"]
-print(rem(l, "an"))
+user_input=input("enter you sentence or set: ")
+
+word=input("type the word you want to remove: ")
+
+l=user_input.split()
+
+print(" ".join(rem(l, word)))
