@@ -20,9 +20,10 @@ def print_scoreboard():
     print(f"{'Computer':<10}: {computer_score}")
     print(f"{'Draws':<10}: {draws}")
     print("="*30)
-    
 
-for _ in range(6):
+n=int(input("enter the number of turns you wanna play for: "))    
+
+for _ in range(n+1):
     
     userinput= input("ENTER YOUR CHOICE (or type 'exit' to quit.): ").lower()
     if userinput=="exit":
@@ -50,7 +51,7 @@ for _ in range(6):
         print("i win HAHA.😚")
         computer_score += 1
 
-    input("\nPress Enter to continue...")
+
 
 
 print_scoreboard()
