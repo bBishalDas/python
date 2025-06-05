@@ -1,3 +1,6 @@
 f= open("file2.txt")
 
-lines=f.readline()
+lines=f.readlines()
+
+print(lines, type(lines))
+f.close()
