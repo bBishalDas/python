@@ -8,7 +8,7 @@ what the file I/O is used is to open a file read or write in it through python.
 # os.chdir(os.path.dirname(__file__))
 
 # Now open the file
-f= open("file.txt")
+f= open("file.txt", "r")
 data = f.read()
 print(data, end="")
 f.close()
