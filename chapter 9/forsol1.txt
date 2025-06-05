@@ -1,0 +1,2 @@
+this file is to demostrat taht by file I/O functions we can detect perticular words in the file given
+work: noice
