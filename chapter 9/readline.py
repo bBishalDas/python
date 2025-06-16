@@ -10,20 +10,20 @@ f.close() # type: ignore
 j= open("file3.txt")
 
 line1=j.readline()
-print(line1, type(line1))
+print(line1)
 
 line2=j.readline()
-print(line2, type(line2))
+print(line2)
 
 line3=j.readline()
-print(line3, type(line3))
+print(line3)
 
 line4=j.readline()
-print(line4, type(line4))
+print(line4)
 
 line5=j.readline()
-print(line5, type(line5))
+print(line5)
 
 line6=j.readline()
-print(line6, type(line6))
+print(line6)
 j.close()
