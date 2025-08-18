@@ -16,7 +16,7 @@ def emoji_translate(text):
         "bye": "👋😢",
         "help": "help😁",
         "funny": "😂",
-        
+        "lol": "🤣",
     }
 
     output = []
