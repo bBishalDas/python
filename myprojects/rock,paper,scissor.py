@@ -99,4 +99,3 @@ if ucount>ccount:
 else:
   print("\nbetter luck next time. computer wins!!")
 # error department (meaning if the user's input is not valid)
-
