@@ -1,37 +1,19 @@
 import random
 
-wapons=("rock", "paper", "scissors")
+CHOICES = ("rock", "paper", "scissors")
+IDX = {n:i for i,n in enumerate(CHOICES)}
+score = {"you": 0, "cpu": 0}
 
-print("rock")
-print("paper")
-print("scissors")
+while max(score.values()) < 3:
+    try:
+        p = IDX[input("rock/paper/scissors: ").strip().lower()]
+    except KeyError:
+        print("✖ invalid choice\n"); continue
+    c = random.randrange(3)
+    outcome = (p - c) % 3
+    print(f"cpu -> {CHOICES[c]}")
+    if outcome == 0: print("= draw\n")
+    elif outcome == 1: score["you"] += 1; print("+ you win this round\n")
+    else: score["cpu"] += 1; print("- cpu wins this round\n")
 
-def battle():
-    user=input("enter your choose of weapon: ")
-    computer=random.choice(wapons)
-    
-    ccount=0
-    ucount=0
-
-    if computer==user:
-        print("this was a tie.")
-    elif ((computer == "rock") and (user == "scissors")) or ((computer=="paper") and (user=="rock")) or ((computer=="scissors") and (user=="paper")):
-        print("computer scores a point!!")
-        ccount+=1
-    else:
-        print("you scored a point!!!")
-        ucount+=1
-
-    if user=="exist":
-        if ccount<ucount:
-         print(f"you won!!! your score {ucount}. thank you for playing.")
-         quit()
-        else:
-            print(f"computer win, its score {ccount} better luck next time.")
-            quit()
-
-
-
-    return battle()
-
-battle()
+print(f"final: you {score['you']} – {score['cpu']} cpu. {'You win!' if score['you']>score['cpu'] else 'CPU wins!'}")
