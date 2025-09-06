@@ -4,9 +4,9 @@ class best_player:
     mvps= 986
 
 
-    def __init__(self): # fuctions starting with "__" are called dunder method which is automaticlly called 
-                        # __init__ is called when is object is created
-        print("i am creating a name")    
+    # def __init__(self): # fuctions starting with "__" are called dunder method which is automaticlly called 
+    #                     # __init__ is called when is object is created
+    #     print("i am creating a name")    
 
 
     def get_info(self):
