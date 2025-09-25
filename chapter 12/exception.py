@@ -7,13 +7,13 @@
 # print("enter a valid number")
 
 # you can also specify or choose a error/exception type using try and except
-def divid():
-    try:
-        a=int(input("enter divident: "))
-        b=int(input("enter divisor: "))
-    except ZeroDivisionError as z: # this here shows the can't divid by zero error at the end of the crashed program.
-        print(z)
-    return a/b 
 
+    
+try:
+    a=int(input("enter divident: "))
+    b=int(input("enter divisor: "))
+    print(a/b)
+except ZeroDivisionError as z: # this here shows the can't divid by zero error at the end of the not crashed program.
+    print(z)
 
-print(divid())
+print("this was an error")
