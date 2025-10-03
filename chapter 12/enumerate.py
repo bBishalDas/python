@@ -9,5 +9,5 @@ for item in l:
 print("\n")
 # but this can be more simplified by using enumerate
 
-for index, item in enumerate(l):
+for index, item in enumerate(l,1):
     print(f"s.no. {index} for item {item}")
